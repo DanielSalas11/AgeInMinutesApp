@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import org.w3c.dom.Text
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -13,6 +14,7 @@ class MainActivity : AppCompatActivity() {
 
     private var tvSelectedDate : TextView? = null
     private var tvAgeInMinutes : TextView? = null
+    private var tvAgeInHours : TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         val btnDatePicker : Button = findViewById(R.id.btnDatePicker)
         tvSelectedDate = findViewById(R.id.tvSelectedDate)
         tvAgeInMinutes = findViewById(R.id.tvAgeInMinutes)
+        tvAgeInHours = findViewById(R.id.tvAgeInHours)
 
         btnDatePicker.setOnClickListener {
             clickDatePicker()
@@ -54,7 +57,10 @@ class MainActivity : AppCompatActivity() {
 
                         val differenceInMinutes = currentDateInMinutes - selectedDateInMinutes
 
+                        val ageInHours = (differenceInMinutes/60)
+
                         tvAgeInMinutes?.text = differenceInMinutes.toString()
+                        tvAgeInHours?.text = ageInHours.toString()
                     }
                 }
             },
