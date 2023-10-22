@@ -81,5 +81,21 @@
         android:textColor="@color/lightGrey"
         android:textSize="18sp"
         />
+    <TextView
+        android:id="@+id/tvAgeInHours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0000"
+        android:textColor="#C84343"
+        android:layout_marginTop="15dp"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="In hours till date"
+        android:textColor="@color/lightGrey"
+        android:textSize="18sp"
+        />
 </LinearLayout>
